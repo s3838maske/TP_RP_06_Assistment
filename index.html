@@ -64,12 +64,15 @@
         for (var i = 0; i < bob.length; i++) {
           if (bob[i] < alice[i]) {
             bobScore += 1;
-          } else {
+          } else if (alice[i] < bob[i]) {
             aliceScore += 1;
+            }else if (alice[i] == bob[i]) {
+              bobScore += 0;
+              aliceScore += 0;
           }
         }
 
-        // console.log(aliceScore , bobScore);
+        console.log(aliceScore , bobScore);
       }
 
       compareTriplets(bob, alice);
@@ -82,7 +85,7 @@
 
     for(var i=0; i<3; i++){
         star+=" *"
-        // console.log(star)
+        console.log(star)
     }
 
 
